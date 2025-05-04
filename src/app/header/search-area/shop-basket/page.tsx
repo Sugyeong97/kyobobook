@@ -6,7 +6,7 @@ import {
 import { AppDispatch, RootState } from "@/store/store";
 import { useSelector, useDispatch } from "react-redux";
 
-export default function page() {
+export default function Page() {
   const basketCounter = useSelector(
     (state: RootState) => state.basketCounter.quantity
   );
