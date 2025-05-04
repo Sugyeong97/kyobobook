@@ -1,12 +1,10 @@
 "use client";
-
 import {
   decreaseProduct,
   increaseProduct,
 } from "@/store/actions/basketCounterActions";
 import { AppDispatch, RootState } from "@/store/store";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function page() {
   const basketCounter = useSelector(
