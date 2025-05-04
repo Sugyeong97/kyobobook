@@ -1,4 +1,3 @@
-import Advertising from "./atom/Advertising";
 import UnorderedListItem from "./atom/UnorderedListItem";
 import WelcomeMarketingList from "./atom/WelcomeMarketingList";
 
@@ -94,7 +93,7 @@ export default function MainPage() {
             />
           </svg>
         </div>
-        <Advertising width="[300px]" borderColor="[#D9D9D9]" />
+        <div className="w-[300px] h-full rounded border border-[#D9D9D9] "></div>
       </div>
 
       {/* 하단 메뉴 */}
@@ -106,12 +105,7 @@ export default function MainPage() {
           ))}
         </ul>
 
-        <Advertising
-          width="[300px]"
-          height="[100px]"
-          bgColor="[#3264FF]"
-          borderColor=""
-        />
+        <div className="w-[300px] h-[100px] rounded bg-[#3264FF]"></div>
       </div>
     </main>
   );
