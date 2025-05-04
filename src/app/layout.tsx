@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
+import Providers from "./Providers";
 
 export const metadata: Metadata = {
   title: "교보문고_임수경",
@@ -16,11 +17,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="text-base">
-        <Header />
-        <main className="mt-[180px]">{children}</main>
-      </body>
-    </html>
+    <Providers>
+      <html lang="en">
+        <body className="text-base w-screen h-screen">
+          <Header />
+          <main className="mt-[180px] h-full">{children}</main>
+        </body>
+      </html>
+    </Providers>
   );
 }
