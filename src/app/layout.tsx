@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "교보문고_임수경",
@@ -17,7 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="text-base">
-        <main>{children}</main>
+        <Header />
+        <main className="mt-[180px]">{children}</main>
       </body>
     </html>
   );
