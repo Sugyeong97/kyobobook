@@ -18,6 +18,10 @@ export const basketCounterReducer = createReducer(initialState, (builder) => {
       state.quantity++;
     })
     .addCase(decreaseProduct, (state) => {
-      state.quantity = state.quantity <= 0 ? 0 : state.quantity--;
+      if (state.quantity > 0) {
+        state.quantity--;
+      } else {
+        state.quantity = 0;
+      }
     });
 });
