@@ -32,7 +32,7 @@ export default function MainSwiperImage() {
         style={
           {
             width: "100%",
-            height: "400px",
+            height: "100%",
             "--swiper-navigation-color": "#fff",
             "--swiper-pagination-color": "#fff",
           } as React.CSSProperties
