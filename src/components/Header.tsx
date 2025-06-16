@@ -61,17 +61,18 @@ export default function Header() {
           />
         </Link>
 
-        {/* 검색창 */}
-        <div className="w-[560px] h-[50px] px-7 border rounded-[50px] border-[#D9D9D9] flex items-center justify-between hover:cursor-text">
-          <div className="flex items-center justify-center gap-1 hover:cursor-pointer text-sm">
-            <div>통합검색</div>
+        {/* 검색영역 */}
+        <div className="w-[560px] h-[50px] px-7 border rounded-[50px] border-[#D9D9D9] flex items-center justify-between">
+          <div className="w-fit h-full flex items-center justify-center">
+            <div className="hover:cursor-pointer">통합검색</div>
+            {/* 아래화살표 */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-3"
+              className="size-4 w-fit px-2 hover:cursor-pointer"
             >
               <path
                 strokeLinecap="round"
@@ -79,9 +80,11 @@ export default function Header() {
                 d="m19.5 8.25-7.5 7.5-7.5-7.5"
               />
             </svg>
-
-            <div className="px-2">|</div>
+            <div>|</div>
           </div>
+
+          {/* 검색창 */}
+          <div className="w-[380px] h-full hover:cursor-text"></div>
 
           {/* 돋보기 */}
           <svg

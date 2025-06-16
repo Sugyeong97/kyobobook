@@ -1,5 +1,7 @@
+import Image from "next/image";
 import UnorderedListItem from "./atom/UnorderedListItem";
 import WelcomeMarketingList from "./atom/WelcomeMarketingList";
+import MainSwiperImage from "./molecules/MainSwiperImage";
 
 export default function MainPage() {
   const ListItemArray = ["베스트", "신상품", "이벤트"];
@@ -48,50 +50,53 @@ export default function MainPage() {
       {/* 슬라이드 및 광고 */}
       <div className="mx-auto max-w-[1200px] h-[380px] flex items-center justify-between">
         {/* 슬라이드 */}
-        <div className="w-[888px] h-full pb-5 bg-[#BAD18B] rounded-[10px] flex items-end justify-center gap-10">
-          {/* 좌우 화살표 */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="size-5 hover:cursor-pointer"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M15.75 19.5 8.25 12l7.5-7.5"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="size-5 hover:cursor-pointer"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M14.25 9v6m-4.5 0V9M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="size-5 hover:cursor-pointer"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="m8.25 4.5 7.5 7.5-7.5 7.5"
-            />
-          </svg>
+        <div className="w-[888px] h-full">
+          <MainSwiperImage />
+
+          {/* <div className="w-full h-full pb-5 flex items-end justify-center gap-10">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-5 hover:cursor-pointer"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 19.5 8.25 12l7.5-7.5"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-5 hover:cursor-pointer"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M14.25 9v6m-4.5 0V9M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-5 hover:cursor-pointer"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m8.25 4.5 7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </div> */}
         </div>
         <div className="w-[300px] h-full rounded border border-[#D9D9D9] "></div>
       </div>
@@ -105,7 +110,9 @@ export default function MainPage() {
           ))}
         </ul>
 
-        <div className="w-[300px] h-[100px] rounded bg-[#3264FF]"></div>
+        <div className="w-[300px] h-[100px] rounded">
+          <Image width={300} height={100} src={`/ad_attendance.jpg`} alt="" />
+        </div>
       </div>
     </main>
   );
