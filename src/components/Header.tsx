@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="w-full h-[180px] fixed top-0 left-0 bg-white">
+    <header className="w-full h-[180px] fixed top-0 left-0 bg-white z-10">
       {/* 상단 메뉴 */}
       <div className="h-[50px] bg-[#f4f4f4] textbl">
         <ul className="max-w-[1200px] mx-auto h-full flex items-center justify-end gap-2 text-xs">
