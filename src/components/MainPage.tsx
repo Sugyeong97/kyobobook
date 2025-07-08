@@ -19,9 +19,9 @@ export default function MainPage() {
   ];
 
   return (
-    <main>
+    <main className="flex flex-col gap-5">
       {/* 상단 메뉴 */}
-      <div className="mx-auto max-w-[1200px] h-[70px] flex items-center justify-start gap-10">
+      <div className="mx-auto w-full xl:max-w-[1200px] lg:max-w-[888px] h-[70px] flex items-center justify-start gap-10">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -48,63 +48,18 @@ export default function MainPage() {
       </div>
 
       {/* 슬라이드 및 광고 */}
-      <div className="mx-auto max-w-[1200px] h-[380px] flex items-center justify-between">
+      <div className="mx-auto xl:max-w-[1200px] h-[380px] flex items-center justify-between gap-5 xl:flex-row lg:flex-col lg:h-fit">
         {/* 슬라이드 */}
         <div className="w-[888px] h-full">
           <MainSwiperImage />
-
-          {/* <div className="w-full h-full pb-5 flex items-end justify-center gap-10">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-5 hover:cursor-pointer"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 19.5 8.25 12l7.5-7.5"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-5 hover:cursor-pointer"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M14.25 9v6m-4.5 0V9M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-5 hover:cursor-pointer"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m8.25 4.5 7.5 7.5-7.5 7.5"
-              />
-            </svg>
-          </div> */}
         </div>
-        <div className="w-[300px] h-full rounded border border-[#D9D9D9] "></div>
+        <div className="w-[300px] h-[380px] rounded border border-[#D9D9D9] "></div>
       </div>
 
       {/* 하단 메뉴 */}
-      <div className="mx-auto max-w-[1200px] h-[140px] flex items-center justify-between">
+      <div className="mx-auto xl:max-w-[1200px] lg:max-w-[888px] h-fit xl:py-5 gap-5 flex xl:flex-row lg:flex-col items-center justify-between">
         {/* 리스트 */}
-        <ul className="w-[888px] flex items-center justify-between">
+        <ul className="w-[888px] grid xl:grid-cols-10 lg:grid-cols-5 items-center justify-between">
           {welcomeItemArray.map((item, index) => (
             <WelcomeMarketingList key={index} title={item} />
           ))}

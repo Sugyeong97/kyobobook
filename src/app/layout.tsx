@@ -21,7 +21,7 @@ export default function RootLayout({
       <html lang="en">
         <body className="text-base w-screen h-screen">
           <Header />
-          <main className="mt-[180px] h-full">{children}</main>
+          <main className="h-full xl:mt-[180px] lg:mt-[300px]">{children}</main>
         </body>
       </html>
     </Providers>

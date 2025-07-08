@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="w-full h-[180px] fixed top-0 left-0 bg-white z-10">
+    <header className="w-full xl:h-[180px] fixed top-0 left-0 bg-white z-10 lg:h-[300px]">
       {/* 상단 메뉴 */}
       <div className="h-[50px] bg-[#f4f4f4] textbl">
         <ul className="max-w-[1200px] mx-auto h-full flex items-center justify-end gap-2 text-xs">
@@ -44,8 +44,8 @@ export default function Header() {
         </ul>
       </div>
 
-      {/* 검색 영역 */}
-      <div className="mx-auto max-w-[1200px] h-[130px] flex items-center justify-between">
+      {/* 로고 + 검색 + 장바구니 + 사용자 */}
+      <div className="mx-auto max-w-[1200px] xl:h-[130px] flex items-center justify-between xl:flex-row lg:flex-col lg:h-fit lg:py-5 lg:gap-5">
         {/* 로고 */}
         <Link
           href={`/`}
@@ -62,7 +62,7 @@ export default function Header() {
         </Link>
 
         {/* 검색영역 */}
-        <div className="w-[560px] h-[50px] px-7 border rounded-[50px] border-[#D9D9D9] flex items-center justify-between">
+        <div className="w-[560px] h-[50px] px-7 bg-white border rounded-[50px] border-[#D9D9D9] flex items-center justify-between">
           <div className="w-fit h-full flex items-center justify-center">
             <div className="hover:cursor-pointer">통합검색</div>
             {/* 아래화살표 */}
