@@ -2,7 +2,7 @@ import MainPage from "@/components/MainPage";
 
 export default function Page() {
   return (
-    <div>
+    <div className="font-noto-sans">
       <MainPage />
       <footer></footer>
     </div>
