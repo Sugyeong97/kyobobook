@@ -1,23 +1,11 @@
 import Image from "next/image";
 import UnorderedListItem from "./atom/UnorderedListItem";
-import WelcomeMarketingList from "./atom/WelcomeMarketingList";
 import MainSwiperImage from "./molecules/MainSwiperImage";
 import Link from "next/link";
+import WelcomeMarketingList from "./organism/WelcomeMarketingList";
 
 export default function MainPage() {
   const ListItemArray = ["베스트", "신상품", "이벤트"];
-  const welcomeItemArray = [
-    "할인혜택",
-    "오늘만특가",
-    "책그리고꽃",
-    "음반·영상",
-    "바로출판",
-    "이달의 책",
-    "손글씨",
-    "사은품",
-    "추천",
-    "APP혜택",
-  ];
 
   return (
     <main className="flex flex-col gap-5">
@@ -158,13 +146,7 @@ export default function MainPage() {
 
       {/* 하단 메뉴 */}
       <div className="mx-auto xl:max-w-[1200px] lg:max-w-[888px] h-fit xl:py-5 gap-5 flex xl:flex-row lg:flex-col items-center justify-between">
-        {/* 리스트 */}
-        <ul className="w-[888px] grid xl:grid-cols-10 lg:grid-cols-5 items-center justify-between">
-          {welcomeItemArray.map((item, index) => (
-            <WelcomeMarketingList key={index} title={item} />
-          ))}
-        </ul>
-
+        <WelcomeMarketingList />
         <div className="w-[300px] h-[100px] rounded">
           <Image width={300} height={100} src={`/ad_attendance.jpg`} alt="" />
         </div>
