@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface welcomeMarketingItemProps {
   title?: string;
@@ -34,7 +35,7 @@ export default function WelcomeMarketingItem({}: welcomeMarketingItemProps) {
   return (
     <ul className="w-[888px] grid xl:grid-cols-10 lg:grid-cols-5 items-center justify-between text-sm">
       <li>
-        <a
+        <Link
           href="/"
           className="w-full h-full flex flex-col items-center justify-center gap-1"
         >
@@ -45,11 +46,11 @@ export default function WelcomeMarketingItem({}: welcomeMarketingItemProps) {
             height={70}
           />
           <span>할인혜택</span>
-        </a>
+        </Link>
       </li>
 
       <li>
-        <a
+        <Link
           href="/"
           className="w-full h-full flex flex-col items-center justify-center gap-1"
         >
@@ -60,11 +61,11 @@ export default function WelcomeMarketingItem({}: welcomeMarketingItemProps) {
             height={70}
           />
           <span>오늘만특가</span>
-        </a>
+        </Link>
       </li>
 
       <li>
-        <a
+        <Link
           href="/"
           className="w-full h-full flex flex-col items-center justify-center gap-1"
         >
@@ -75,11 +76,11 @@ export default function WelcomeMarketingItem({}: welcomeMarketingItemProps) {
             height={70}
           />
           <span>APP혜택</span>
-        </a>
+        </Link>
       </li>
 
       <li>
-        <a
+        <Link
           href="/"
           className="w-full h-full flex flex-col items-center justify-center gap-1"
         >
@@ -90,11 +91,11 @@ export default function WelcomeMarketingItem({}: welcomeMarketingItemProps) {
             height={70}
           />
           <span>기프트카드</span>
-        </a>
+        </Link>
       </li>
 
       <li>
-        <a
+        <Link
           href="/"
           className="w-full h-full flex flex-col items-center justify-center gap-1"
         >
@@ -105,11 +106,11 @@ export default function WelcomeMarketingItem({}: welcomeMarketingItemProps) {
             height={70}
           />
           <span>바로출판</span>
-        </a>
+        </Link>
       </li>
 
       <li>
-        <a
+        <Link
           href="/"
           className="w-full h-full flex flex-col items-center justify-center gap-1"
         >
@@ -120,11 +121,11 @@ export default function WelcomeMarketingItem({}: welcomeMarketingItemProps) {
             height={70}
           />
           <span>이달의 책</span>
-        </a>
+        </Link>
       </li>
 
       <li>
-        <a
+        <Link
           href="/"
           className="w-full h-full flex flex-col items-center justify-center gap-1"
         >
@@ -135,11 +136,11 @@ export default function WelcomeMarketingItem({}: welcomeMarketingItemProps) {
             height={70}
           />
           <span>손글씨</span>
-        </a>
+        </Link>
       </li>
 
       <li>
-        <a
+        <Link
           href="/"
           className="w-full h-full flex flex-col items-center justify-center gap-1"
         >
@@ -150,11 +151,11 @@ export default function WelcomeMarketingItem({}: welcomeMarketingItemProps) {
             height={70}
           />
           <span>사은품</span>
-        </a>
+        </Link>
       </li>
 
       <li>
-        <a
+        <Link
           href="/"
           className="w-full h-full flex flex-col items-center justify-center gap-1"
         >
@@ -165,11 +166,11 @@ export default function WelcomeMarketingItem({}: welcomeMarketingItemProps) {
             height={70}
           />
           <span>추천</span>
-        </a>
+        </Link>
       </li>
 
       <li>
-        <a
+        <Link
           href="/"
           className="w-full h-full flex flex-col items-center justify-center gap-1"
         >
@@ -180,7 +181,7 @@ export default function WelcomeMarketingItem({}: welcomeMarketingItemProps) {
             height={70}
           />
           <span>인물&작품</span>
-        </a>
+        </Link>
       </li>
     </ul>
   );
