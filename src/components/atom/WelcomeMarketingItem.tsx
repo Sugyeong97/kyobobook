@@ -8,30 +8,30 @@ interface welcomeMarketingItemProps {
 }
 
 export default function WelcomeMarketingItem({}: welcomeMarketingItemProps) {
-  const welcomeImage = [
-    "/welcomeMarketing/PC_QM_01.svg",
-    "/welcomeMarketing/PC_QM_02.svg",
-    "/welcomeMarketing/PC_QM_03.svg",
-    "/welcomeMarketing/PC_QM_04.svg",
-    "/welcomeMarketing/PC_QM_05.svg",
-    "/welcomeMarketing/PC_QM_06.svg",
-    "/welcomeMarketing/PC_QM_07.svg",
-    "/welcomeMarketing/PC_QM_08.svg",
-    "/welcomeMarketing/PC_QM_09.svg",
-    "/welcomeMarketing/PC_QM_10.svg",
-  ];
-  const welcomeText = [
-    "할인혜택",
-    "오늘만특가",
-    "APP혜택",
-    "기프트카드",
-    "바로출판",
-    "이달의 책",
-    "손글씨",
-    "사은품",
-    "추천",
-    "인물&작품",
-  ];
+  // const welcomeImage = [
+  //   "/welcomeMarketing/PC_QM_01.svg",
+  //   "/welcomeMarketing/PC_QM_02.svg",
+  //   "/welcomeMarketing/PC_QM_03.svg",
+  //   "/welcomeMarketing/PC_QM_04.svg",
+  //   "/welcomeMarketing/PC_QM_05.svg",
+  //   "/welcomeMarketing/PC_QM_06.svg",
+  //   "/welcomeMarketing/PC_QM_07.svg",
+  //   "/welcomeMarketing/PC_QM_08.svg",
+  //   "/welcomeMarketing/PC_QM_09.svg",
+  //   "/welcomeMarketing/PC_QM_10.svg",
+  // ];
+  // const welcomeText = [
+  //   "할인혜택",
+  //   "오늘만특가",
+  //   "APP혜택",
+  //   "기프트카드",
+  //   "바로출판",
+  //   "이달의 책",
+  //   "손글씨",
+  //   "사은품",
+  //   "추천",
+  //   "인물&작품",
+  // ];
   return (
     <ul className="w-[888px] grid xl:grid-cols-10 lg:grid-cols-5 items-center justify-between text-sm">
       <li>

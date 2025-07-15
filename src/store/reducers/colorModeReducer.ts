@@ -9,7 +9,11 @@ const initialState: colorModeState = {
 };
 
 export const colorModeReducer = createReducer(initialState, (builder) => {
-  builder.addCase(darkMode, (state) => {
-    state.mode = alert("dark");
-  });
+  builder
+    .addCase(darkMode, (state) => {
+      state.mode = alert("dark");
+    })
+    .addCase(lightMode, (state) => {
+      state.mode = alert("light");
+    });
 });
