@@ -2,8 +2,8 @@ import Image from "next/image";
 import UnorderedListItem from "./atom/UnorderedListItem";
 import MainSwiperImage from "./molecules/MainSwiperImage";
 import Link from "next/link";
-import WelcomeMarketingItem from "./atom/WelcomeMarketingItem";
 import RecommendSwiper from "./molecules/RecommendSwiper";
+import WelcomeMarketingGroup from "./organism/WelcomeMarketingList";
 
 export default function MainPage() {
   const ListItemArray = ["베스트", "신상품", "이벤트"];
@@ -139,30 +139,40 @@ export default function MainPage() {
       {/* 슬라이드 및 광고 */}
       <section className="mx-auto xl:max-w-[1200px] h-[380px] flex items-center justify-between gap-5 xl:flex-row lg:flex-col lg:h-fit">
         {/* 슬라이드 */}
-        <div className="w-[888px] h-full">
-          <MainSwiperImage />
-        </div>
+        <MainSwiperImage />
         <div className="w-[300px] h-[380px] rounded border border-[#D9D9D9] "></div>
       </section>
 
       {/* 하단 메뉴 */}
       <section className="mx-auto xl:max-w-[1200px] lg:max-w-[888px] h-fit xl:py-5 gap-5 flex xl:flex-row lg:flex-col items-center justify-between">
-        <WelcomeMarketingItem />
+        <WelcomeMarketingGroup />
         <div className="w-[300px] h-[100px] rounded">
-          <Image width={300} height={100} src={`/ad_attendance.jpg`} alt="" />
+          <Image
+            width={300}
+            height={100}
+            src={`/MAIN_IMAGE/ad_attendance.jpg`}
+            alt=""
+          />
         </div>
       </section>
 
       {/* 오늘의 선택 */}
-      <section className="w-full mx-auto xl:max-w-[1200px] p-5">
-        <p className="text-2xl font-bold mb-5">오늘의 선택</p>
+      <section className="w-full mx-auto xl:max-w-[1200px] py-5 my-10">
+        <p className="text-3xl font-bold mb-7">오늘의 선택</p>
         <div className="flex">
-          <Image alt="" src={"/9791171714179.jpg"} width={200} height={300} />
-          <div className="flex flex-col gap-5 p-10">
-            <a href="/" className="mb-7">
+          <Link href={"/"}>
+            <Image
+              alt=""
+              src={"/MAIN_IMAGE/9791171714179.jpg"}
+              width={200}
+              height={300}
+            />
+          </Link>
+          <div className="flex flex-col gap-3 p-10">
+            <Link href="/" className="mb-7 text-xl font-semibold">
               법은 어떻게 민주주의를 배신하는가
-            </a>
-            <div className="flex gap-2 text-blue-800 font-bold">
+            </Link>
+            <div className="flex gap-1 text-blue-800 font-semibold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -193,28 +203,56 @@ export default function MainPage() {
 
       {/* 중간광고 */}
       <section className="w-full mx-auto xl:max-w-[1200px] flex gap-5">
-        <Image
-          alt=""
-          src={"/main_mid_ad1.png"}
-          width={595}
-          height={180}
-          className="rounded"
-        />
-        <Image
-          alt=""
-          src={"/main_mid_ad2.png"}
-          width={595}
-          height={180}
-          className="rounded"
-        />
+        <Link href={"/"}>
+          <Image
+            alt=""
+            src={"/MAIN_IMAGE/main_mid_ad1.png"}
+            width={595}
+            height={180}
+            className="rounded"
+          />
+        </Link>
+
+        <Link href={"/"}>
+          <Image
+            alt=""
+            src={"/MAIN_IMAGE/main_mid_ad2.png"}
+            width={595}
+            height={180}
+            className="rounded"
+          />
+        </Link>
       </section>
 
       {/* 올 여름 추천 미스터리 소설 10 (mysteryRecommend 폴더) */}
-      <section className="w-full mx-auto xl:max-w-[1200px] p-5">
-        <p className="text-2xl font-bold mb-5">올 여름 추천 미스터리 소설 10</p>
-        <div className="flex">
-          <RecommendSwiper />
+      <section className="w-full mx-auto xl:max-w-[1200px] py-5 my-10">
+        <div className="w-full h-full mb-7 flex items-center justify-between">
+          <p className="text-3xl font-bold">올 여름 추천 미스터리 소설 10</p>
+          <Link href={"/"} className="flex items-center gap-1 font-bold">
+            더보기
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="size-4"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 4.5v15m7.5-7.5h-15"
+              />
+            </svg>
+          </Link>
         </div>
+        <RecommendSwiper />
+      </section>
+
+      {/* 출판사에서 자신있게 추천해요 */}
+      <section className="w-full mx-auto xl:max-w-[1200px] py-5 my-10">
+        <p className="text-3xl font-bold mb-7">출판사에서 자신있게 추천해요</p>
+        <div className="flex"></div>
       </section>
     </main>
   );

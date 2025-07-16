@@ -15,7 +15,7 @@ export default function MainSwiperImage() {
   const modules = [Autoplay, Pagination, Navigation, EffectFade];
 
   return (
-    <div>
+    <div className="w-[888px] h-full">
       <Swiper
         spaceBetween={30}
         slidesPerView={1}
@@ -40,7 +40,7 @@ export default function MainSwiperImage() {
       >
         <SwiperSlide>
           <Image
-            src={"/main_slide_img_1.jpg"}
+            src={"/MAIN_IMAGE/main_slide_img_1.jpg"}
             width={888}
             height={380}
             className="rounded-[10px]"
@@ -50,7 +50,7 @@ export default function MainSwiperImage() {
 
         <SwiperSlide>
           <Image
-            src={"/main_slide_img_2.jpg"}
+            src={"/MAIN_IMAGE/main_slide_img_2.jpg"}
             width={888}
             height={380}
             className="rounded-[10px]"
@@ -60,7 +60,7 @@ export default function MainSwiperImage() {
 
         <SwiperSlide>
           <Image
-            src={"/main_slide_img_3.jpg"}
+            src={"/MAIN_IMAGE/main_slide_img_3.jpg"}
             width={888}
             height={380}
             className="rounded-[10px]"
