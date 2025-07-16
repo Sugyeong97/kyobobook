@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 
 import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
+import { main_slide_img } from "@/contexts/VariousList";
 
 export default function MainSwiperImage() {
   const modules = [Autoplay, Pagination, Navigation, EffectFade];
@@ -38,35 +39,17 @@ export default function MainSwiperImage() {
           } as React.CSSProperties
         }
       >
-        <SwiperSlide>
-          <Image
-            src={"/MAIN_IMAGE/main_slide_img_1.jpg"}
-            width={888}
-            height={380}
-            className="rounded-[10px]"
-            alt=""
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Image
-            src={"/MAIN_IMAGE/main_slide_img_2.jpg"}
-            width={888}
-            height={380}
-            className="rounded-[10px]"
-            alt=""
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Image
-            src={"/MAIN_IMAGE/main_slide_img_3.jpg"}
-            width={888}
-            height={380}
-            className="rounded-[10px]"
-            alt=""
-          />
-        </SwiperSlide>
+        {main_slide_img.map((item) => (
+          <SwiperSlide key={item.id}>
+            <Image
+              src={item.imageSrc}
+              width={888}
+              height={380}
+              className="rounded-[10px]"
+              alt={item.imageAlt}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

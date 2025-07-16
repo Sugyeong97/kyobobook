@@ -110,7 +110,7 @@ export default function MainPage() {
       </section>
 
       {/* 상단 메뉴 */}
-      <section className="mx-auto w-full xl:max-w-[1200px] lg:max-w-[888px] h-[70px] flex items-center justify-start gap-10">
+      <section className="w-full mx-auto xl:max-w-[1200px] lg:max-w-[888px] h-[70px] flex items-center justify-start gap-10">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -146,12 +146,13 @@ export default function MainPage() {
       {/* 하단 메뉴 */}
       <section className="mx-auto xl:max-w-[1200px] lg:max-w-[888px] h-fit xl:py-5 gap-5 flex xl:flex-row lg:flex-col items-center justify-between">
         <WelcomeMarketingGroup />
-        <div className="w-[300px] h-[100px] rounded">
+        <div>
           <Image
             width={300}
             height={100}
             src={`/MAIN_IMAGE/ad_attendance.jpg`}
             alt=""
+            className="rounded"
           />
         </div>
       </section>
