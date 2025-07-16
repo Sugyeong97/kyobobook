@@ -2,7 +2,8 @@ import Image from "next/image";
 import UnorderedListItem from "./atom/UnorderedListItem";
 import MainSwiperImage from "./molecules/MainSwiperImage";
 import Link from "next/link";
-import WelcomeMarketingList from "./organism/WelcomeMarketingList";
+import WelcomeMarketingItem from "./atom/WelcomeMarketingItem";
+import RecommendSwiper from "./molecules/RecommendSwiper";
 
 export default function MainPage() {
   const ListItemArray = ["베스트", "신상품", "이벤트"];
@@ -10,7 +11,7 @@ export default function MainPage() {
   return (
     <main className="flex flex-col gap-5">
       {/* 로고 + 검색 + 장바구니 + 사용자 */}
-      <div className="mx-auto max-w-[1200px] xl:h-[130px] flex items-center justify-between xl:flex-row lg:flex-col lg:h-fit lg:py-5 lg:gap-5">
+      <section className="mx-auto max-w-[1200px] xl:h-[130px] flex items-center justify-between xl:flex-row lg:flex-col lg:h-fit lg:py-5 lg:gap-5">
         {/* 로고 */}
         <Link
           href={`/`}
@@ -106,10 +107,10 @@ export default function MainPage() {
             </svg>
           </Link>
         </div>
-      </div>
+      </section>
 
       {/* 상단 메뉴 */}
-      <div className="mx-auto w-full xl:max-w-[1200px] lg:max-w-[888px] h-[70px] flex items-center justify-start gap-10">
+      <section className="mx-auto w-full xl:max-w-[1200px] lg:max-w-[888px] h-[70px] flex items-center justify-start gap-10">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -133,24 +134,88 @@ export default function MainPage() {
             <UnorderedListItem key={index} title={item} />
           ))}
         </ul>
-      </div>
+      </section>
 
       {/* 슬라이드 및 광고 */}
-      <div className="mx-auto xl:max-w-[1200px] h-[380px] flex items-center justify-between gap-5 xl:flex-row lg:flex-col lg:h-fit">
+      <section className="mx-auto xl:max-w-[1200px] h-[380px] flex items-center justify-between gap-5 xl:flex-row lg:flex-col lg:h-fit">
         {/* 슬라이드 */}
         <div className="w-[888px] h-full">
           <MainSwiperImage />
         </div>
         <div className="w-[300px] h-[380px] rounded border border-[#D9D9D9] "></div>
-      </div>
+      </section>
 
       {/* 하단 메뉴 */}
-      <div className="mx-auto xl:max-w-[1200px] lg:max-w-[888px] h-fit xl:py-5 gap-5 flex xl:flex-row lg:flex-col items-center justify-between">
-        <WelcomeMarketingList />
+      <section className="mx-auto xl:max-w-[1200px] lg:max-w-[888px] h-fit xl:py-5 gap-5 flex xl:flex-row lg:flex-col items-center justify-between">
+        <WelcomeMarketingItem />
         <div className="w-[300px] h-[100px] rounded">
           <Image width={300} height={100} src={`/ad_attendance.jpg`} alt="" />
         </div>
-      </div>
+      </section>
+
+      {/* 오늘의 선택 */}
+      <section className="w-full mx-auto xl:max-w-[1200px] p-5">
+        <p className="text-2xl font-bold mb-5">오늘의 선택</p>
+        <div className="flex">
+          <Image alt="" src={"/9791171714179.jpg"} width={200} height={300} />
+          <div className="flex flex-col gap-5 p-10">
+            <a href="/" className="mb-7">
+              법은 어떻게 민주주의를 배신하는가
+            </a>
+            <div className="flex gap-2 text-blue-800 font-bold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z"
+                />
+              </svg>
+              <span>우리가 법을 믿지 못할 때 필요한 시민 수업</span>
+            </div>
+            <div>
+              <p>
+                세계적 헌법 학자가 설명하는 우리가 법을 믿지 못할 때 필요한 시민
+                수업. <br />
+                법에만 의존하지 않고 나아가 문제 해결의 주체로서 올바른 시민이
+                되는 법을 전한다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 중간광고 */}
+      <section className="w-full mx-auto xl:max-w-[1200px] flex gap-5">
+        <Image
+          alt=""
+          src={"/main_mid_ad1.png"}
+          width={595}
+          height={180}
+          className="rounded"
+        />
+        <Image
+          alt=""
+          src={"/main_mid_ad2.png"}
+          width={595}
+          height={180}
+          className="rounded"
+        />
+      </section>
+
+      {/* 올 여름 추천 미스터리 소설 10 (mysteryRecommend 폴더) */}
+      <section className="w-full mx-auto xl:max-w-[1200px] p-5">
+        <p className="text-2xl font-bold mb-5">올 여름 추천 미스터리 소설 10</p>
+        <div className="flex">
+          <RecommendSwiper />
+        </div>
+      </section>
     </main>
   );
 }
