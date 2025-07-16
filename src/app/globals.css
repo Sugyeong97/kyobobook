@@ -11,14 +11,21 @@
   --font-noto-sans: var(--font-noto-sans);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ffffff;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+#footer-li > li::after {
+  content: "|";
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
 }

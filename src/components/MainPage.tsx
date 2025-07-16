@@ -2,23 +2,25 @@ import Image from "next/image";
 import UnorderedListItem from "./atom/UnorderedListItem";
 import MainSwiperImage from "./molecules/MainSwiperImage";
 import Link from "next/link";
-import RecommendSwiper from "./molecules/RecommendSwiper";
+import MysteryRecommendSwiper from "./molecules/MysteryRecommendSwiper";
 import WelcomeMarketingGroup from "./organism/WelcomeMarketingList";
+import MD_RecommandList from "./organism/MD_RecommandList";
+import MainMidAd from "./organism/MainMidAd";
 
 export default function MainPage() {
   const ListItemArray = ["베스트", "신상품", "이벤트"];
 
   return (
-    <main className="flex flex-col gap-5">
+    <main className="flex flex-col gap-5 mb-10">
       {/* 로고 + 검색 + 장바구니 + 사용자 */}
-      <section className="mx-auto max-w-[1200px] xl:h-[130px] flex items-center justify-between xl:flex-row lg:flex-col lg:h-fit lg:py-5 lg:gap-5">
+      <section className="w-full xl:max-w-[1200px] mx-auto xl:h-[130px] xl:gap-10 flex items-center justify-between xl:flex-row xl:pt-16 lg:py-5 lg:flex-col lg:h-fit lg:gap-5">
         {/* 로고 */}
         <Link
           href={`/`}
           className="w-[250px] h-full flex items-center justify-start"
         >
           <Image
-            src="https://contents.kyobobook.co.kr/resources/fo/images/common/ink/united/logo_book.svg"
+            src="/logo_book.svg"
             alt="로고"
             className="w-[200px] hover:cursor-pointer"
             width={250}
@@ -204,25 +206,14 @@ export default function MainPage() {
 
       {/* 중간광고 */}
       <section className="w-full mx-auto xl:max-w-[1200px] flex gap-5">
-        <Link href={"/"}>
-          <Image
-            alt=""
-            src={"/MAIN_IMAGE/main_mid_ad1.png"}
-            width={595}
-            height={180}
-            className="rounded"
-          />
-        </Link>
-
-        <Link href={"/"}>
-          <Image
-            alt=""
-            src={"/MAIN_IMAGE/main_mid_ad2.png"}
-            width={595}
-            height={180}
-            className="rounded"
-          />
-        </Link>
+        <MainMidAd
+          id={1}
+          imageSrc="/MAIN_IMAGE/middleAdvertise/main_mid_ad1.png"
+        />
+        <MainMidAd
+          id={2}
+          imageSrc="/MAIN_IMAGE/middleAdvertise/main_mid_ad2.png"
+        />
       </section>
 
       {/* 올 여름 추천 미스터리 소설 10 (mysteryRecommend 폴더) */}
@@ -247,13 +238,44 @@ export default function MainPage() {
             </svg>
           </Link>
         </div>
-        <RecommendSwiper />
+        <MysteryRecommendSwiper />
       </section>
 
-      {/* 출판사에서 자신있게 추천해요 */}
+      {/* MD들이 신중하게 골랐어요 */}
       <section className="w-full mx-auto xl:max-w-[1200px] py-5 my-10">
-        <p className="text-3xl font-bold mb-7">출판사에서 자신있게 추천해요</p>
-        <div className="flex"></div>
+        <div className="w-full h-full mb-7 flex items-center justify-between">
+          <p className="text-3xl font-bold">MD들이 신중하게 골랐어요</p>
+          <Link href={"/"} className="flex items-center gap-1 font-bold">
+            더보기
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="size-4"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 4.5v15m7.5-7.5h-15"
+              />
+            </svg>
+          </Link>
+        </div>
+        <MD_RecommandList />
+      </section>
+
+      {/* 중간광고 */}
+      <section className="w-full mx-auto xl:max-w-[1200px] flex gap-5">
+        <MainMidAd
+          id={3}
+          imageSrc="/MAIN_IMAGE/middleAdvertise/main_mid_ad3.png"
+        />
+        <MainMidAd
+          id={4}
+          imageSrc="/MAIN_IMAGE/middleAdvertise/main_mid_ad4.png"
+        />
       </section>
     </main>
   );

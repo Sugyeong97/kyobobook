@@ -46,9 +46,10 @@ export default function RecommendSwiper() {
                   src={item.imageSrc}
                   layout="fill"
                   objectFit="fill"
+                  className="!w-[200px] !h-[300px]"
                 />
               </div>
-              <span>{item.title}</span>
+              <span className="py-2">{item.title}</span>
             </div>
           </SwiperSlide>
         ))}

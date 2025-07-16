@@ -134,3 +134,43 @@ export const main_mystery_image = [
     imageSrc: "/MAIN_IMAGE/mysteryRecommend/9791192738529.jpg",
   },
 ];
+
+// 메인 MD 추천
+export const main_md_list = [
+  {
+    id: 1,
+    title: "스타트라인",
+    imageSrc: "/MAIN_IMAGE/MD_Recommand/9791141610654.jpg",
+    imageAlt: "스타트라인 책표지",
+  },
+  {
+    id: 2,
+    title: "작은 별이지만 빛나고 있어",
+    imageSrc: "/MAIN_IMAGE/MD_Recommand/9791197037153.jpg",
+    imageAlt: "작은 별이지만 빛나고 있어(30만부 기념 미드나잇 에디션) 책표지",
+  },
+  {
+    id: 3,
+    title: "찍히지 않습니다 2",
+    imageSrc: "/MAIN_IMAGE/MD_Recommand/9791138486941.jpg",
+    imageAlt: "찍히지 않습니다 2 책표지",
+  },
+  {
+    id: 4,
+    title: "듣기의 철학",
+    imageSrc: "/MAIN_IMAGE/MD_Recommand/9791189327415.jpg",
+    imageAlt: "듣기의 철학 책표지",
+  },
+  {
+    id: 5,
+    title: "서경석의 한국사 한 권",
+    imageSrc: "/MAIN_IMAGE/MD_Recommand/9791165703523.jpg",
+    imageAlt: "서경석의 한국사 한 권 책표지",
+  },
+  {
+    id: 6,
+    title: "턴! 턴! 턴!",
+    imageSrc: "/MAIN_IMAGE/MD_Recommand/9791193978917.jpg",
+    imageAlt: "턴! 턴! 턴! 책표지",
+  },
+];
