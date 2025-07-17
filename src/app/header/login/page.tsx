@@ -28,9 +28,11 @@ export default function page() {
           className="border rounded p-4 w-full h-12"
         />
 
-        <div className="w-full h-12 mt-4 bg-[#5055b1] text-white rounded flex items-center justify-center hover:cursor-pointer hover:bg-[#2c307c]">
-          로그인
-        </div>
+        <input
+          type="submit"
+          value="로그인"
+          className="w-full h-12 mt-4 bg-[#5055b1] text-white rounded flex items-center justify-center hover:cursor-pointer hover:bg-[#2c307c]"
+        />
       </div>
 
       <div className="w-full flex items-center justify-center gap-2">

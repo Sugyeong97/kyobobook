@@ -2,13 +2,24 @@ interface formInputProps {
   title?: string;
   type: string;
   value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export default function FormInput({ title = "", type, value }: formInputProps) {
+export default function FormInput({
+  title = "",
+  type,
+  value,
+  onChange = undefined,
+}: formInputProps) {
   return (
     <div className="w-[500px] flex flex-col gap-1">
-      <p className="text-base font-bold">{title}</p>
-      <input type={type} value={value} className="w-full h-10 border rounded" />
+      <label className="text-base font-black">{title}</label>
+      <input
+        type={type}
+        value={value}
+        onChange={onChange}
+        className="w-full p-3 border rounded"
+      />
     </div>
   );
 }
